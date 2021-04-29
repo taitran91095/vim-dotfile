@@ -1,5 +1,5 @@
 " Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
@@ -7,18 +7,18 @@ Plug 'scrooloose/nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+Plug 'jiangmiao/auto-pairs' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
+Plug 'morhetz/gruvbox'
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'morhetz/gruvbox'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
-let g:ale_completion_tsserver_autoimport = 1
+let g:ale_completion_autoimport = 1
 Plug 'dense-analysis/ale'
 
 " Initialize plugin system
@@ -65,7 +65,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
+colorscheme gruvbox
 set relativenumber
 
 set smarttab
@@ -75,7 +75,6 @@ set shiftwidth=4
 " always uses spaces instead of tab characters
 set expandtab
 
-colorscheme gruvbox
 
 set hidden 
 
