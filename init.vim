@@ -1,6 +1,7 @@
 " Specify a directory for plugins
 call plug#begin()
 
+
 Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
